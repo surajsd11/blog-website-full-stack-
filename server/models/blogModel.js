@@ -16,7 +16,7 @@ const blogSchema = new monogoose.Schema({
     type: String,
   },
   user_name: {
-    type: string,
+    type: String,
   },
   user: {
     type: monogoose.Schema.Types.ObjectId,
