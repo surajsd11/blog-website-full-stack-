@@ -3,9 +3,7 @@ import blogsModel from "../models/blogModel.js";
 class BlogController {
   static getAllBlogs = async (req, res) => {
     try {
-      const fetchAllBlogs = await blogsModel.find({
-        user: req.user._id,
-      });
+      const fetchAllBlogs = await blogsModel.find({});
       return res.status(200).json({
         fetchAllBlogs,
       });
