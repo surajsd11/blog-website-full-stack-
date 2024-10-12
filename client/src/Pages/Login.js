@@ -12,7 +12,7 @@ const Login = () => {
     const handleLogin = async (e) => {
         e.preventDefault()
         try {
-          const res = await axios.post("https://66725723-b512-42c1-9e7d-e2082c15d40b-00-3erfq85ovd6zs.sisko.replit.dev/api/v1/user/login",input)
+          const res = await axios.post("https://blog-website-full-stack-mu.vercel.app/api/v1/user/login",input)
           alert(res.data.message)
           localStorage.setItem("token",res.data.token)
           localStorage.setItem("username",res.data.name)

@@ -9,7 +9,7 @@ const Home = () => {
     const fetchAllBlogs = async () => {
       try {
         const res = await axios.get(
-          "https://66725723-b512-42c1-9e7d-e2082c15d40b-00-3erfq85ovd6zs.sisko.replit.dev/api/v1/get/allblogs",
+          "https://blog-website-full-stack-mu.vercel.app/api/v1/get/allblogs",
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -48,7 +48,7 @@ const Home = () => {
                           data-mdb-ripple-color='light'
                         >
                           <img
-                            src={`https://66725723-b512-42c1-9e7d-e2082c15d40b-00-3erfq85ovd6zs.sisko.replit.dev/${item.thumbnail}`}
+                            src={`https://blog-website-full-stack-mu.vercel.app/${item.thumbnail}`}
                             className='img-fluid'
                             alt={item.title}
                           />

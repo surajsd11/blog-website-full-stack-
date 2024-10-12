@@ -10,7 +10,7 @@ const SingleBlog = () => {
 
     useEffect(() => {
         const fetchsingleBlog = async () => {
-           const res = await axios.get(`https://66725723-b512-42c1-9e7d-e2082c15d40b-00-3erfq85ovd6zs.sisko.replit.dev/api/v1/get/blog/${id}`,
+           const res = await axios.get(`https://blog-website-full-stack-mu.vercel.app/api/v1/get/blog/${id}`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -29,7 +29,7 @@ const SingleBlog = () => {
             <div className='row'>
                 <h1 className='my-3'>{blog.title}</h1>
                 <img
-                    src={`https://66725723-b512-42c1-9e7d-e2082c15d40b-00-3erfq85ovd6zs.sisko.replit.dev/${blog.thumbnail}`}
+                    src={`https://blog-website-full-stack-mu.vercel.app/${blog.thumbnail}`}
                     className='img img-responsive img-rounded my-3'
                     alt=""
                 />

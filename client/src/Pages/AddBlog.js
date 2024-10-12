@@ -35,7 +35,7 @@ const AddBlog = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try { 
-       const res = await axios.post("https://66725723-b512-42c1-9e7d-e2082c15d40b-00-3erfq85ovd6zs.sisko.replit.dev/api/v1/add/blog",formdata,{
+       const res = await axios.post("https://blog-website-full-stack-mu.vercel.app/api/v1/add/blog",formdata,{
          headers: {
             "Authorization" : `Bearer ${localStorage.getItem("token")}`
          }
