@@ -15,13 +15,14 @@ class BlogController {
   };
 
   static addNewBlog = async (req, res) => {
-    const { title, category, description, thumbnail } = req.body;
+    const { title, category, description, thumbnail, user_name} = req.body;
     try {
       if (title && description) {
         const addBlog = new blogsModel({
           title: title,
           category: category,
           description: description,
+          user_name: user_name,
           thumbnail: req.file.filename,
           user: req.user._id,
         });

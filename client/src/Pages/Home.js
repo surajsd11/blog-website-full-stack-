@@ -62,6 +62,7 @@ const Home = () => {
                         <div className='card-body'>
                           <h5 className='card-title'>{item.title}</h5>
                           <p className='card-text'>{item.description}</p>
+                          <p className='card-text'>Post By : {item.user_name}</p>
                           <Link to={`/blog/${item._id}`} className='btn btn-primary'>
                             Read more
                           </Link>

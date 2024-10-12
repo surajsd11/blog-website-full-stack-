@@ -7,7 +7,7 @@ const AddBlog = () => {
   const [input,setInput] = useState({
     title: "",
     description: "",
-    category: "",
+    user_name: "",
   })
   const [file,setFile] = useState([])
 //   const [categories,setCategories] = useState([])
@@ -30,6 +30,7 @@ const AddBlog = () => {
   formdata.append("title",input.title)
 //   formdata.append("category",input.category)
   formdata.append("description",input.description)
+  formdata.append("user_name",input.user_name)
   formdata.append("thumbnail",file)
 
   const handleSubmit = async (e) => {
@@ -90,6 +91,18 @@ const AddBlog = () => {
                        value={input.description}
                        onChange={(e) => setInput({...input, [e.target.name] : e.target.value})}
                        placeholder='Blog Description'
+                       className='form-control'
+                     />
+                  </div>
+                  <div className='mb-3'>
+                     <label htmlFor='formGroupExampleInput' className='form-label'>
+                        User_name
+                     </label>
+                     <textarea
+                       name='user_name'
+                       value={input.name}
+                       onChange={(e) => setInput({...input, [e.target.name] : e.target.value})}
+                       placeholder='User_Name'
                        className='form-control'
                      />
                   </div>

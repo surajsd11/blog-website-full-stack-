@@ -15,6 +15,9 @@ const blogSchema = new monogoose.Schema({
   thumbnail: {
     type: String,
   },
+  user_name: {
+    type: string,
+  },
   user: {
     type: monogoose.Schema.Types.ObjectId,
     refer: "users",
